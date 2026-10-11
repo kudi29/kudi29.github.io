@@ -690,9 +690,9 @@
 
             <h4>What I did</h4>
             <ul class="project-details">
-              <li>Turned a broad request into scoped objectives, KPIs and a defined analysis period.</li>
-              <li>Profiled the data in PostgreSQL, including key, orphan-record, missing-value and financial reconciliation checks, and documented the limitations I found.</li>
-              <li>Cleaned it through a rerunnable Bronze → Silver → Gold pipeline and modeled a star schema with sentinel keys for "not applicable" members and role-playing dates.</li>
+              <li>Turned a broad request into scoped objectives, KPIs, and a defined analysis period.</li>
+              <li>Profiled the data in PostgreSQL, including key, orphan-record, missing-value, and financial reconciliation checks, and documented the limitations I found.</li>
+              <li>Built an automated ETL Bronze → Silver → Gold pipeline and modeled a star schema with sentinel keys for "not applicable" members and role-playing dates.</li>
               <li>Reconciled the numbers between layers. About 12.9% of order lines (all reseller) did not match the expected sales calculation, so I kept Sales Amount as the source of truth; recalculating would have overstated sales by roughly $527K.</li>
               <li>Built a Power BI semantic model with central DAX measures and fiscal-calendar time intelligence.</li>
               <li>Wrote prioritized recommendations, such as repricing reseller finished-bike lines against standard cost.</li>
