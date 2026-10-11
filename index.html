@@ -333,6 +333,10 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .gallery.one-col {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
     .gallery figure {
       margin: 0;
     }
@@ -546,7 +550,8 @@
       .skills-grid,
       .approach-grid,
       .gallery,
-      .gallery.two-cols {
+      .gallery.two-cols,
+      .gallery.one-col {
         grid-template-columns: 1fr;
       }
       .footer-content {
@@ -693,16 +698,26 @@
             <h4>The report</h4>
             <div class="gallery two-cols">
               <figure>
-                <a href="images/projects/adventureworks-executive-overview.jpg" target="_blank" rel="noopener noreferrer">
-                  <img src="images/projects/adventureworks-executive-overview.jpg" alt="Executive Overview page of the AdventureWorks Power BI report" loading="lazy">
+                <a href="https://raw.githubusercontent.com/kudi29/Operations-Revenue-Analysis-AdventureWorks-/main/images/Executive_overview.png" target="_blank" rel="noopener noreferrer">
+                  <img src="https://raw.githubusercontent.com/kudi29/Operations-Revenue-Analysis-AdventureWorks-/main/images/Executive_overview.png" alt="Executive Overview page of the AdventureWorks Power BI report" loading="lazy">
                 </a>
                 <figcaption>Executive Overview</figcaption>
               </figure>
               <figure>
-                <a href="images/projects/adventureworks-product-performance.jpg" target="_blank" rel="noopener noreferrer">
-                  <img src="images/projects/adventureworks-product-performance.jpg" alt="Product Performance page of the AdventureWorks Power BI report" loading="lazy">
+                <a href="https://raw.githubusercontent.com/kudi29/Operations-Revenue-Analysis-AdventureWorks-/main/images/Product_performance.png" target="_blank" rel="noopener noreferrer">
+                  <img src="https://raw.githubusercontent.com/kudi29/Operations-Revenue-Analysis-AdventureWorks-/main/images/Product_performance.png" alt="Product Performance page of the AdventureWorks Power BI report" loading="lazy">
                 </a>
                 <figcaption>Product Performance</figcaption>
+              </figure>
+            </div>
+
+            <h4>The data model</h4>
+            <div class="gallery one-col">
+              <figure>
+                <a href="https://raw.githubusercontent.com/kudi29/Operations-Revenue-Analysis-AdventureWorks-/main/images/data_model.png" target="_blank" rel="noopener noreferrer">
+                  <img src="https://raw.githubusercontent.com/kudi29/Operations-Revenue-Analysis-AdventureWorks-/main/images/data_model.png" alt="Power BI model view of the AdventureWorks star schema: the sales fact table connected to its five dimensions" loading="lazy">
+                </a>
+                <figcaption>Star schema in Power BI: the sales fact table connected to customer, product, reseller, territory and date dimensions. Order date is the active date relationship; due and ship dates are inactive.</figcaption>
               </figure>
             </div>
 
@@ -716,7 +731,7 @@
               <span class="tag">Stakeholder Requirements</span>
             </div>
 
-            <a class="text-link" href="https://github.com/kudi29/Operations_and_Revenue_Analysis" target="_blank" rel="noopener noreferrer">
+            <a class="text-link" href="https://github.com/kudi29/Operations-Revenue-Analysis-AdventureWorks-" target="_blank" rel="noopener noreferrer">
               View full write-up on GitHub →
             </a>
           </article>
