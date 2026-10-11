@@ -64,9 +64,9 @@ Turned a **180K-row supply-chain dataset** into a 3-page decision-ready report, 
 - Documented limitation: 2018 holds only 37 days, so it is excluded from year-on-year comparisons
 
 <p align="center">
-  <img src="images/projects/sales-executive-overview.jpg" width="32%" alt="Sales Executive Overview">
-  <img src="images/projects/sales-discount-analysis.jpg" width="32%" alt="Discount Analysis">
-  <img src="images/projects/sales-product-category.jpg" width="32%" alt="Product and Category Performance">
+  <a href="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/page1-executive-overview.png"><img src="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/page1-executive-overview.png" width="32%" alt="Sales Executive Overview"></a>
+  <a href="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/page2-discount-analysis.png"><img src="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/page2-discount-analysis.png" width="32%" alt="Discount Analysis"></a>
+  <a href="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/page3-product-category.png"><img src="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/page3-product-category.png" width="32%" alt="Product and Category Performance"></a>
 </p>
 
 ## Skills
