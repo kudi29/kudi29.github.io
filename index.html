@@ -755,14 +755,23 @@
               <li>Which products and categories really drive profit, not just transactions?</li>
             </ul>
 
+            <h4>Key findings (2015 to 2017)</h4>
+            <ul class="project-details">
+              <li><strong>Margin falls as discounts rise:</strong> from 13.1% with no discount to 9.4% in the 21%–30% band, and every discounted band sits below full price.</li>
+              <li><strong>The most-used discount band is the one to review:</strong> 11%–20% carries the most orders (42K) at a 9.8% margin, 3.3 points below full price.</li>
+              <li><strong>Profit is concentrated:</strong> ten products generate about 91% of sales and 90% of profit, and the Fan Shop department alone is 47% of sales at a 10.7% margin. The lowest-margin departments (7.0%–8.9%) are under 1% of sales, so they cannot move overall profit.</li>
+            </ul>
+
             <h4>What I did</h4>
             <ul class="project-details">
-              <li><strong>Profiled and cleaned</strong> the source data, fixing inconsistent values, invalid records, missing information and formatting problems.</li>
-              <li><strong>Built a Bronze → Silver → Gold workflow</strong> in PostgreSQL to clean, standardize and prepare the data.</li>
-              <li><strong>Designed a star schema</strong> with fact and dimension tables, fixing the grain so every calculation is consistent.</li>
-              <li><strong>Created SQL views</strong> for profitability, product and category performance, and discount analysis.</li>
-              <li><strong>Wrote DAX measures</strong> and a 3-page interactive report: executive overview, discount analysis, and product and category performance.</li>
-              <li><strong>Validated and reconciled</strong> figures against the source, and documented a data limitation (2018, the final year, holds only 37 days, so it is excluded from year-on-year comparisons).</li>
+              <li><strong>Profiled and cleaned</strong> the source data in SQL: standardized data types, whitespace and capitalization, and found and removed a step that overwrote the "Payment" transaction type.</li>
+              <li><strong>Built a re-runnable Bronze → Silver → Gold workflow</strong> in PostgreSQL, so a rebuild never duplicates rows.</li>
+              <li><strong>Designed a star schema</strong> with a fixed order-line grain, a gap-free date dimension for time intelligence, and a location dimension keyed on market, region, country, state and city so same-named cities cannot be mismatched.</li>
+              <li><strong>Created four SQL reporting views</strong> for discount impact, category profitability, regional profitability and customer segments.</li>
+              <li><strong>Wrote DAX measures</strong> and a 3-page interactive report: executive overview, discount analysis, and product and category performance. Year-over-year comparisons appear only for a single selected year, so a multi-year total is never compared with a shifted period.</li>
+              <li><strong>Validated and reconciled</strong> the pipeline with a diagnostics script: row counts across layers, null keys, duplicates, and silver-to-gold sales and profit. Margin is defined as profit ÷ sales in both SQL and Power BI.</li>
+              <li><strong>Documented a data limitation:</strong> 2018, the final year, holds only 31 days of orders (January 1–31), so it is excluded from year-level analysis.</li>
+              <li><strong>Documented the project</strong> with a README, full technical documentation and a DAX measure library.</li>
             </ul>
 
             <h4>The report</h4>
@@ -787,6 +796,16 @@
               </figure>
             </div>
 
+            <h4>The data model</h4>
+            <div class="gallery one-col">
+              <figure>
+                <a href="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/data_model.png" target="_blank" rel="noopener noreferrer">
+                  <img src="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/data_model.png" alt="Power BI model view of the Sales and Profitability model: the date and product dimensions each connected to the two reporting views, with a separate measures table" loading="lazy">
+                </a>
+                <figcaption>Power BI model: the date and product dimensions each filter both reporting views through one-to-many, single-direction relationships. All DAX measures sit in a dedicated measures table.</figcaption>
+              </figure>
+            </div>
+
             <div class="project-tags">
               <span class="tag">PostgreSQL</span>
               <span class="tag">SQL</span>
@@ -794,6 +813,7 @@
               <span class="tag">Power BI</span>
               <span class="tag">DAX</span>
               <span class="tag">Data Validation</span>
+              <span class="tag">Data Quality</span>
             </div>
 
             <a class="text-link" href="https://github.com/kudi29/Sales-Profitability-Analysis" target="_blank" rel="noopener noreferrer">
