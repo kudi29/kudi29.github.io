@@ -58,15 +58,25 @@ Scoped a stakeholder request into KPIs, then analysed **121,253 sales order line
 
 Turned a **180K-row supply-chain dataset** into a 3-page decision-ready report, fixing data-quality issues in SQL before building any visual.
 
-- Bronze → Silver → Gold PostgreSQL workflow
-- Star schema with fact and dimension tables and a defined grain
-- SQL reporting views, DAX measures, validation and reconciliation checks
-- Documented limitation: 2018 holds only 37 days, so it is excluded from year-on-year comparisons
+| Finding | Result |
+|---|---|
+| Margin falls as discounts rise | 13.1% with no discount → 9.4% in the 21%–30% band |
+| The band to review | 11%–20% is the most used (42K orders) at a 9.8% margin |
+| Profit is concentrated | Ten products generate ~91% of sales and ~90% of profit; Fan Shop is 47% of sales |
+
+- Re-runnable Bronze → Silver → Gold PostgreSQL workflow
+- Star schema with a fixed order-line grain and a gap-free date dimension
+- Four SQL reporting views, DAX measures, validation and reconciliation checks
+- Documented limitation: 2018 holds only 31 days of orders (Jan 1–31), so it is excluded from year-level analysis
 
 <p align="center">
   <a href="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/page1-executive-overview.png"><img src="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/page1-executive-overview.png" width="32%" alt="Sales Executive Overview"></a>
   <a href="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/page2-discount-analysis.png"><img src="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/page2-discount-analysis.png" width="32%" alt="Discount Analysis"></a>
   <a href="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/page3-product-category.png"><img src="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/page3-product-category.png" width="32%" alt="Product and Category Performance"></a>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kudi29/Sales-Profitability-Analysis/main/images/data_model.png" width="70%" alt="Sales and Profitability model in Power BI: date and product dimensions connected to the two reporting views, with a separate measures table">
 </p>
 
 ## Skills
