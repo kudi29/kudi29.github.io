@@ -31,21 +31,25 @@ My process: understand the business question → profile and clean the data in P
 
 ## Featured projects
 
-### 1. [Operations & Revenue Analysis (AdventureWorks)](https://github.com/kudi29/Operations_and_Revenue_Analysis)
+### 1. [Operations & Revenue Analysis (AdventureWorks)](https://github.com/kudi29/Operations-Revenue-Analysis-AdventureWorks-)
 
 **PostgreSQL · Bronze/Silver/Gold · Star schema · Power BI · DAX**
 
-Scoped a stakeholder request into KPIs, then analysed **121,253 sales order lines** (FY2018-FY2020).
+Scoped a stakeholder request into KPIs, then analysed **121,253 sales order lines** (July 2017 to mid-June 2020, FY2018-FY2020).
 
 | Finding | Result |
 |---|---|
-| Growth with margin pressure | Sales $23.9M → $51.9M, margin 12.7% → 11.2% |
+| Growth with margin pressure | Sales $23.9M → $51.9M (FY2020 runs only to mid-June), margin 12.7% → 11.2% |
 | Revenue ≠ profit | Australia: ~10% of sales, 29% of gross profit |
-| Where the losses are | Touring Bikes: -11.8% margin via resellers vs 37.8% online. Discounting tested and ruled out |
+| Where the losses are | Touring Bikes: -11.8% margin via resellers vs 37.8% online. The discount field was zero on every row, so I derived effective discounts; discount depth did not explain the losses |
 
 <p align="center">
-  <img src="images/projects/adventureworks-executive-overview.jpg" width="48%" alt="AdventureWorks Executive Overview">
-  <img src="images/projects/adventureworks-product-performance.jpg" width="48%" alt="AdventureWorks Product Performance">
+  <img src="https://raw.githubusercontent.com/kudi29/Operations-Revenue-Analysis-AdventureWorks-/main/images/Executive_overview.png" width="48%" alt="AdventureWorks Executive Overview">
+  <img src="https://raw.githubusercontent.com/kudi29/Operations-Revenue-Analysis-AdventureWorks-/main/images/Product_performance.png" width="48%" alt="AdventureWorks Product Performance">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kudi29/Operations-Revenue-Analysis-AdventureWorks-/main/images/data_model.png" width="70%" alt="AdventureWorks star schema in the Power BI model view">
 </p>
 
 ### 2. [Sales & Profitability Analysis](https://github.com/kudi29/Sales-Profitability-Analysis)
@@ -91,10 +95,9 @@ Hand-built with plain HTML and CSS (no frameworks), responsive, and hosted on Gi
 
 ```text
 ├── index.html
-├── style.css
 ├── assets/Wadahfred_Kudi_CV.pdf
 └── images/
-    ├── profile.png
+    ├── profile.jpg
     └── projects/
 ```
 
